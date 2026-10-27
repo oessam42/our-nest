@@ -1,0 +1,4 @@
+import { env } from 'cloudflare:workers';
+export async function GET(){const r=await env.DB!.prepare('SELECT data FROM items').all();return Response.json(r.results.map((x:any)=>JSON.parse(x.data)));}
+export async function POST(req:Request){if(req.headers.get('sec-fetch-site')==='cross-site')return new Response('Forbidden',{status:403});const x:any=await req.json();if(!x.id||!x.name||typeof x.name!=='string'||JSON.stringify(x).length>30000)return new Response('Invalid item',{status:400});await env.DB!.prepare('INSERT INTO items (id,data) VALUES (?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data').bind(x.id,JSON.stringify(x)).run();return Response.json({ok:true});}
+export async function DELETE(req:Request){if(req.headers.get('sec-fetch-site')==='cross-site')return new Response('Forbidden',{status:403});const id=new URL(req.url).searchParams.get('id');await env.DB!.prepare('DELETE FROM items WHERE id=?').bind(id).run();return Response.json({ok:true});}
