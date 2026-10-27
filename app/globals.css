@@ -16,3 +16,226 @@
 .subcategory-add-btn{display:inline-flex;align-items:center;gap:4px;font-size:10px;color:#558775;background:#f0f4ea;border:1px solid #d4dec9;border-radius:6px;padding:4px 9px;cursor:pointer;transition:all .2s}
 .subcategory-add-btn:hover{background:#528575;color:#fff;border-color:#528575}
 .subcategory-empty-hint{display:flex;align-items:center;justify-content:space-between;background:#f4f6ee;border:1px dashed #d6dfcc;border-radius:8px;padding:10px 14px;color:#83917a;font-size:11px;margin-bottom:10px}
+
+/* =========================================================
+   HOMEPAGE FIT & LANDSCAPE ADAPTATIONS FOR ANY SCREEN SIZE
+   ========================================================= */
+
+/* Ensure living-house never forces overflow */
+.living-house {
+  min-height: 0 !important;
+}
+
+/* Medium height screens and tablets in landscape */
+@media (max-height: 750px), (orientation: landscape) and (max-height: 850px) {
+  .new-house-app {
+    padding-top: 56px !important;
+  }
+  .new-house-app.view-home {
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+  .new-house-app .sidebar {
+    height: 56px !important;
+    padding: 0 20px !important;
+    gap: 20px !important;
+  }
+  .new-house-app .brand {
+    font-size: 22px !important;
+    gap: 8px !important;
+  }
+  .new-house-app .brand-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .new-house-app nav button {
+    font-size: 11px !important;
+    padding: 7px 12px !important;
+    gap: 6px !important;
+  }
+  .new-house-app nav button svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .living-house {
+    height: calc(100dvh - 56px) !important;
+    min-height: 0 !important;
+  }
+  .world-svg {
+    padding: 6px 16px !important;
+  }
+  .house-heading {
+    top: 14px !important;
+    left: 20px !important;
+  }
+  .house-heading > p {
+    font-size: 8px !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 4px !important;
+  }
+  .house-heading h1 {
+    font-size: 22px !important;
+    letter-spacing: -0.5px !important;
+  }
+  .house-heading > span {
+    font-size: 10px !important;
+    margin-top: 4px !important;
+    max-width: 280px !important;
+  }
+  .back-house {
+    top: 75px !important;
+    left: 20px !important;
+    padding: 6px 12px !important;
+    font-size: 10px !important;
+  }
+  .life-status {
+    left: 16px !important;
+    bottom: 12px !important;
+    padding: 7px 12px !important;
+    gap: 8px !important;
+    border-radius: 10px !important;
+  }
+  .life-status small {
+    font-size: 7px !important;
+    margin-bottom: 2px !important;
+  }
+  .life-status strong {
+    font-size: 10px !important;
+  }
+  .scene-controls {
+    right: 16px !important;
+    bottom: 12px !important;
+    padding: 4px 10px !important;
+    gap: 6px !important;
+  }
+  .scene-controls button {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .scene-controls button svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .scene-controls select {
+    font-size: 9px !important;
+    max-width: 130px !important;
+    padding: 3px !important;
+  }
+  .room-dock {
+    bottom: 12px !important;
+    gap: 4px !important;
+  }
+  .room-dock button {
+    font-size: 9px !important;
+    padding: 6px 10px !important;
+  }
+}
+
+/* Compact landscape screens (mobile landscape e.g. height <= 520px) */
+@media (max-height: 520px) {
+  .new-house-app {
+    padding-top: 44px !important;
+  }
+  .new-house-app.view-home {
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+  .new-house-app .sidebar {
+    height: 44px !important;
+    padding: 0 12px !important;
+    gap: 10px !important;
+  }
+  .new-house-app .brand {
+    font-size: 18px !important;
+    gap: 6px !important;
+  }
+  .new-house-app .brand-icon svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .new-house-app nav button {
+    font-size: 10px !important;
+    padding: 5px 8px !important;
+    gap: 4px !important;
+  }
+  .new-house-app nav button svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .living-house {
+    height: calc(100dvh - 44px) !important;
+    min-height: 0 !important;
+  }
+  .world-svg {
+    padding: 2px 8px !important;
+  }
+  .house-heading {
+    top: 6px !important;
+    left: 12px !important;
+  }
+  .house-heading > p,
+  .house-heading > span {
+    display: none !important;
+  }
+  .house-heading h1 {
+    font-size: 16px !important;
+  }
+  .back-house {
+    top: 45px !important;
+    left: 12px !important;
+    padding: 4px 8px !important;
+    font-size: 9px !important;
+  }
+  .life-status {
+    left: 8px !important;
+    bottom: 6px !important;
+    padding: 4px 8px !important;
+    gap: 6px !important;
+  }
+  .life-status svg {
+    display: none !important;
+  }
+  .life-status small {
+    font-size: 6px !important;
+  }
+  .life-status strong {
+    font-size: 9px !important;
+  }
+  .scene-controls {
+    right: 8px !important;
+    bottom: 6px !important;
+    padding: 2px 6px !important;
+    gap: 4px !important;
+  }
+  .scene-controls button {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .scene-controls button svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .scene-controls select {
+    font-size: 8px !important;
+    max-width: 95px !important;
+    padding: 1px !important;
+  }
+  .room-dock {
+    bottom: 6px !important;
+    gap: 3px !important;
+  }
+  .room-dock button {
+    font-size: 8px !important;
+    padding: 4px 8px !important;
+  }
+  /* In room view drawer */
+  .view-room .living-house {
+    width: calc(100% - 300px) !important;
+    height: calc(100dvh - 44px) !important;
+  }
+  .view-room .content {
+    width: 300px !important;
+    height: calc(100dvh - 44px) !important;
+    padding: 14px 12px !important;
+  }
+}
