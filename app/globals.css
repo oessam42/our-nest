@@ -17,6 +17,19 @@
 .subcategory-add-btn:hover{background:#528575;color:#fff;border-color:#528575}
 .subcategory-empty-hint{display:flex;align-items:center;justify-content:space-between;background:#f4f6ee;border:1px dashed #d6dfcc;border-radius:8px;padding:10px 14px;color:#83917a;font-size:11px;margin-bottom:10px}
 
+/* All Items - 4 Room Lists & Subcategories */
+.all-items-container{display:flex;flex-direction:column;gap:32px;margin-top:18px}
+.all-items-room-section{background:#ffffff;border:1px solid #e7e3d8;border-radius:18px;padding:24px 26px;box-shadow:0 4px 18px rgba(36,75,68,0.04)}
+.all-items-room-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1.5px solid #ece8dd;gap:16px;flex-wrap:wrap}
+.all-items-room-title{display:flex;align-items:center;gap:14px}
+.room-icon-badge{width:44px;height:44px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.all-items-room-title h2{font-family:Georgia,serif;font-size:22px;font-weight:600;color:#244b44;margin:0;line-height:1.2}
+.all-items-room-title small{display:block;font-size:12px;color:#7b8f84;margin-top:3px;font-family:Arial,sans-serif}
+.room-total-badge{font-family:Arial,sans-serif;font-size:11px;font-weight:600;background:#eaf3eb;color:#386e65;border-radius:20px;padding:4px 11px;margin-left:8px;align-self:center}
+.room-add-btn{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:#386e65;background:#eaf3eb;border:1px solid #c9ded0;border-radius:9px;padding:7px 14px;cursor:pointer;transition:all .2s ease}
+.room-add-btn:hover{background:#386e65;color:#ffffff;border-color:#386e65;box-shadow:0 2px 8px rgba(56,110,101,0.2)}
+@media(max-width:600px){.all-items-room-section{padding:18px 16px}.all-items-room-header{flex-direction:column;align-items:flex-start;gap:12px}.room-add-btn{align-self:flex-start}}
+
 /* =========================================================
    HOMEPAGE FIT & LANDSCAPE ADAPTATIONS FOR ANY SCREEN SIZE
    ========================================================= */
